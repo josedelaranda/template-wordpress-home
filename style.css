@@ -1,0 +1,596 @@
+/*
+Theme Name: My Template
+Theme URI: http://your-url/
+Description: Theme basico para personalizar.
+Version: 1.0
+Author: Your Name
+Author URI: http://your-url
+Tags: white, custom header, fixed width, two columns, widgets
+
+	This theme was built by Your Name
+
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Helpers */
+
+.clear {
+	clear:both;
+	height:1px;
+	margin:0;
+	padding:0;
+	font-size: 1px;
+	line-height: 0;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+#accessibility, .invisible {
+	position: absolute;
+	top: -999em;
+	left: -999em;
+}
+a {
+	outline: 0 !important;
+}
+
+.block {
+	display:block !important;
+}
+.inline {
+	display: inline !important;
+}
+.pointer {
+	cursor:pointer !important;
+}
+.indent {
+	text-indent: -9000px !important;
+}
+.noborder_t {
+	border-top:0 !important;
+}
+.noborder_r {
+	border-right:0 !important;
+}
+.noborder_b {
+	border-bottom:0 !important;
+}
+.noborder_l {
+	border-left:0 !important;
+}
+.left {
+	text-align:left;
+}
+.right {
+	text-align:right;
+}
+.center {
+	text-align:center;
+}
+.justify {
+	text-align:justify;
+}
+.imgLeft {
+	float:left;
+	margin:5px 9px 10px 0;
+}
+.imgRight {
+	float:right;
+	margin:5px 0 10px 9px;
+}
+.imgCenter {
+	text-align:center;
+	padding:15px 0;
+}
+img, a img {
+	border:0;
+}
+.no_border {
+	border: 0 none !important;
+}
+.no_bg {
+	background: none !important;
+}
+.no_margin {
+	margin: 0 !important;
+}
+.float_left {
+	float: left;
+}
+.float_right {
+	float: right;
+}
+.list_reset, .list_reset li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.list_reset {
+	margin: 0 0 1em;
+}
+.no_padding {
+	padding: 0 !important;
+}
+.no_bold {
+	font-weight: 300;
+}
+.no_underline {
+	text-decoration: none;
+}
+.no_underline {
+	text-decoration: none;
+}
+.no_underline:hover {
+	text-decoration: underline;
+}
+
+/* Typography*/
+
+body {
+	text-align:left;
+	font-size: 12px;
+	color: #000;
+	font-family: Arial, Verdana, Helvetica, sans-serif;
+}
+img {
+	border: 0;
+}
+a, a:link a:active {
+	text-decoration: none;
+	color: #000;
+}
+a:visited {
+}
+a:hover {
+	text-decoration: underline;
+}
+h1 {
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	line-height: 1em;
+}
+h2 {
+	font-size: 2em;
+	font-weight: 300;
+	margin: 0 0 1em;
+	line-height: 1em;
+}
+h3 {
+	font-size: 1.5em;
+	font-weight: 600;
+	margin: 0 0 1em 0;
+	line-height: 1em;
+}
+h4 {
+	font-size: 1.2em;
+	font-weight: 300;
+	margin: 0 0 1em;
+	padding:0;
+	line-height: 1em;
+}
+h5 {
+	font-size: 1em;
+	margin: 0;
+	padding:0;
+}
+h6 {
+	font-size: 1em;
+	margin: 0 0 0 0;
+	padding:0;
+}
+p {
+	font-size: 1em;
+	margin:0 0 1em;
+	padding:0;
+	line-height:1.4em;
+}
+blockquote {
+	border-left:10px solid #ddd;
+	margin-left:10px;
+}
+pre {
+	display: block;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1em;
+	background-color: #eee;
+	margin: 0 16px 10px 16px;
+	padding: 2px;
+}
+code {
+	display: block;
+	font-family: "Courier New", Courier, monospace;
+	font-size: 1em;
+	background-color: #eee;
+}
+strong, b {
+	font-weight: bold;
+}
+em, i {
+	font-style:italic;
+}
+ul {
+	margin: 0 0 1.5em 20px;
+	padding: 0;
+	font-size:1em;
+}
+ul li {
+	margin: 0 0 0.25em 10px;
+	padding: 0;
+	line-height:1.4em;
+}
+ol {
+	margin: 0 0 1.5em 20px;
+	padding:0;
+	line-height: 1.4em;
+	font-size:1em;
+}
+ol li {
+	margin: 0 0 0.25em 10px;
+	padding: 0;
+}
+dl {
+	margin: 0 0 1.5em 0;
+	padding: 0;
+	line-height:130%;
+	font-size:1em;
+}
+dl dt {
+	margin: 0.25em 0 0 0;
+	padding: 0;
+}
+dl dd {
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+table {
+	margin: 0 0 1.5em 0;
+	font-size: 1em;
+}
+table caption {
+	font-weight: bold;
+	margin: 0 0 0 0;
+	padding: 0 0 0.5em 0;
+	text-align: left;
+}
+th {
+	font-weight: bold;
+	text-align: left;
+}
+form {
+	margin: 0;
+	padding: 0;
+	color:  #000;
+}
+fieldset {
+	border: 0;
+	margin: 0 0;
+	padding: 0;
+}
+label, .label {
+	cursor: pointer;
+	font-size: 1em;
+	margin-right:4px;
+}
+input, input.text, input.password, input.btn, #searchsubmit {
+	font: 1em Arial, Verdana, Helvetica, sans-serif;
+	padding: 2px 4px;
+	color:  #000;
+}
+textarea {
+	font: 1em/1.2em Arial, Verdana, Helvetica, sans-serif;
+	height: 108px;
+	margin-top: 0;
+	padding: 2px 4px;
+	overflow: auto;
+	color:  #000;
+}
+input.text, textarea {
+	background: #FFF;
+	border: #7E9DB9 solid 1px;
+}
+select {
+	font: 1em Arial, Verdana, Helvetica, sans-serif;
+	overflow:hidden;
+	height:1.9em;
+	vertical-align:middle;
+	margin-right:4px;
+	color:  #000;
+}
+optgroup {
+	font-weight:bold;
+	font-style:normal;
+	vertical-align:middle;
+	border-top:1px solid #DDD;
+}
+option {
+	border-top:1px solid #DDD;
+	padding:2px 5px;
+	vertical-align:middle;
+}
+form dl, form dt, form dd {
+	margin: 0;
+	padding: 0;
+}
+form dl {
+	padding: 0;
+}
+form dt {
+	width:100%;
+}
+form dd {
+	width:100%;
+	margin-bottom: 5px;
+}
+button {
+	cursor: pointer;
+	font: 1em Arial, Verdana, Helvetica, sans-serif;
+	vertical-align:bottom;
+	padding: 0 5px;
+}
+.entry-meta {
+	margin-bottom: 10px;
+}
+.hentry, .widget, .comment, .navigation-links {
+	margin-bottom: 20px;
+}
+.page-title {
+	font-size: 14px;
+	font-weight: bold;
+}
+.page-title span {
+	font-style: italic;
+	font-weight: normal;
+}
+.entry-title, .entry-title a {
+	color: #000;
+	font-size: 24px;
+	line-height: 28px;
+}
+.entry-title a:hover {
+	color: #2361a1;
+	text-decoration: none;
+}
+address {
+	font-style: italic;
+}
+abbr[title], acronym[title], dfn[title] {
+	cursor: help;
+	border-bottom: 1px dotted #666;
+}
+blockquote {
+	color: #666;
+	font-style: italic;
+	border-left: 1px solid #ddd;
+	margin-left: 15px;
+	padding-left: 10px;
+}
+code, pre {
+	line-height: 15px;
+}
+var, kbd, samp, code, pre {
+	font: 12px/1.4 Consolas, "Andale Mono", Courier, "Courier New", monospace;
+	background: #fafafa;
+}
+kbd {
+	font-weight: bold;
+}
+samp, var {
+	font-style: italic;
+}
+pre {
+	white-space: pre;
+	overflow: auto;
+	padding: 10px;
+	border: 1px solid #ddd;
+	clear: both;
+}
+code {
+	padding: 0px 3px;
+}
+
+/* Wordpress Classes don't delete */
+
+.comment-list, .comment-list .children {
+	list-style: none;
+}
+.comment-list {
+	margin-left: 10px;
+}
+.comment {
+	margin-bottom: 40px;
+}
+.comment-list .children {
+	margin-top: 40px;
+}
+.comment-meta {
+	margin-bottom: 10px;
+}
+.commenter {
+	font-size: 16px;
+}
+.avatar {
+	float: right;
+	margin: 0px 0px 10px 20px;
+	border: 1px #ddd solid;
+	padding: 1px;
+}
+#comment-form .form-section input {
+	margin-right: 10px;
+}
+.form-section {
+	margin-bottom: 10px;
+}
+.form-section label {
+	cursor: pointer;
+}
+#commenter-details input {
+	margin-right: 10px;
+}
+#allowed-tags {
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	padding: 5px 10px;
+	background: #fff;
+	border: 1px #ddd dotted;
+	border-top: none;
+	width: 573px;
+}
+img.alignleft {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+img.alignright {
+	display: block;
+	float: right;
+	margin: 0 0 1em 1em;
+}
+img.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	clear: both;
+	margin-bottom: 1em;
+}
+.wp-caption {
+	text-align: center;
+}
+.wp-caption img {
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+}
+.wp-caption .wp-caption-text {
+	margin: 0;
+	padding: 5px;
+}
+.wp-caption {
+	margin-top: 0.4em;
+}
+.wp-caption {
+	background: #eee;
+	margin-bottom: 1.625em;
+	max-width: 96%;
+	padding: 9px;
+}
+.wp-caption img {
+	display: block;
+	margin: 0 auto;
+	max-width: 98%;
+}
+.wp-caption .wp-caption-text, .gallery-caption {
+	color: #666;
+	font-family: Georgia, serif;
+	font-size: 12px;
+}
+.wp-caption .wp-caption-text {
+	margin-bottom: 0;
+	padding: 10px 20px;
+	position: relative;
+}
+#content .gallery {
+	margin: 0 auto 1.625em;
+}
+#content .gallery a img {
+	border: none;
+}
+
+.alignleft {
+	float: left;
+	margin: 0 1em 1em 0;
+}
+.alignright {
+	float: right;
+	margin: 0 0 1em 1em;
+}
+.aligncenter {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	clear: both;
+}
+/* Navigation */
+.navigation {
+	padding: 1em 0;
+}
+#wp-calendar {
+	width:100%;
+}
+#wp-calendar caption {
+	font-weight: bold;
+	color: #222;
+	text-align: left;
+	font-size:14px;
+	padding-bottom: 4px;
+}
+#wp-calendar thead {
+	font-size:11px;
+}
+#wp-calendar thead th {
+	text-align: center;
+}
+#wp-calendar tbody {
+	color: #aaa;
+}
+#wp-calendar tbody td {
+	padding: 3px 0 2px;
+	background: #f5f5f5;
+	border:1px solid #fff;
+	text-align: center;
+}
+#wp-calendar tbody .pad {
+	background: none;
+}
+#wp-calendar tfoot #next {
+	text-align: right;
+}
+.entry ul {
+	list-style: disc;
+}
+.entry ol {
+	list-style: decimal;
+}
+
+.ui-tabs-hide {
+	display: none;
+}
