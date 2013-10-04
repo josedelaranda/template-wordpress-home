@@ -26,6 +26,7 @@
 <meta name="keywords" content="<?php bloginfo('description'); ?>" />
 <meta name="viewport" content="width=device-width">
 
+<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/bootstrap.min.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/layout.css" type="text/css" media="screen" />
 
