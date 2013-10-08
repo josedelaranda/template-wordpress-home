@@ -52,7 +52,16 @@ add_filter( 'the_content', 'shortcode_unautop', 100 );
 // Custom admin login logo
 function custom_login_logo() {
 	echo '<style type="text/css">
-	h1 a { background-image: url('.get_bloginfo('template_directory').'/images/logo.jpg) !important; }
+	h1 a { 
+		background-image: url('.get_bloginfo('template_directory').'/images/logo-admin.jpg) !important;
+		background-size: auto !important;
+		height: 180px !important;
+		width: 400px !important;
+		margin: 0 0 0 -35px !important; 
+	}
+	#login {
+	    padding: 50px 0 0 !important; 
+	}
 	</style>';
 }
 add_action('login_head', 'custom_login_logo');
@@ -224,9 +233,9 @@ function get_search_form_new () {
 		return;
 	}
 
-	$form = '<form method="get" id="searchform" action="' . get_option('home') . '/" >
+	$form = '<form class="searchform" method="get" id="searchform" action="' . get_option('home') . '/" >
 	<fieldset>
-	<input class="populate" title="Buscar" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s" id="s" />
+	<input placeholder="Buscar" type="text" value="' . esc_attr(apply_filters('the_search_query', get_search_query())) . '" name="s" id="s" />
 	<button class="value" type="submit" id="searchsubmit" value="'. esc_attr__('Search') .'"><span>Buscar</span></button>
 	</fieldset>
 	</form>';
