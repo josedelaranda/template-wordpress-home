@@ -4,6 +4,7 @@
  * @subpackage Classic_Theme
  */
 
+ //
 //Add support image featured
 add_theme_support('post-thumbnails');
 
