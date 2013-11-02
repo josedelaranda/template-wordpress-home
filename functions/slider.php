@@ -112,6 +112,10 @@
 		// Probably a good idea to make sure your data is set
 		if( isset( $_POST['url'] ) )
 			update_post_meta( $post_id, 'url', wp_kses( $_POST['url'], $allowed ) );
+
+		// Probably a good idea to make sure your data is set
+		if( isset( $_POST['texto_slider'] ) )
+			update_post_meta( $post_id, 'texto_slider', wp_kses( $_POST['texto_slider'], $allowed ) );
 	}
 
 	/*function blm_init_method() {
